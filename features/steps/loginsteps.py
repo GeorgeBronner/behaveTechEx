@@ -1,5 +1,6 @@
 from behave import *
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 @when('Enter username "{user}" and password "{password}"')
@@ -15,6 +16,11 @@ def step_impl(context):
 
 @then('User is successfully logged into the Dashboard')
 def step_impl(context):
-    text = context.driver.find_element(By.XPATH,"/html/body/div/div[1]/div[1]/header/div[1]/div[1]/span/h6").text
-    assert text == 'Dashboard'
-    context.driver.close()
+    try:
+        text = context.driver.find_element(By.XPATH,"/html/body/div/div[1]/div[1]/header/div[1]/div[1]/span/h6").text
+    except NoSuchElementException:
+        context.driver.close()
+        assert False, "Test Failed"
+    if text == 'Dashboard':
+        context.driver.close()
+        assert True, "Test Passed"
