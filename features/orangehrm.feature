@@ -1,6 +1,6 @@
 Feature: OrangeHRM Logo
 
-    Scenario: Logo presence on Orange Home Page
+    Scenario: Title and Logo presence on Orange Home Page
         Given launch chrome browse
         When open orange hrm homepage 
         Then verify that the logo is present on Page
