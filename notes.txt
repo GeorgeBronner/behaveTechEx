@@ -1,5 +1,0 @@
-# Run to create json reports:
-# behave -f allure_behave.formatter:AllureFormatter -o reports/ features
-
-# Run for Allure to serve report is web browser:
-# allure serve reports
