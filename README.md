@@ -11,13 +11,13 @@
 ### Features
 
 * orangehrm.feature - tests the driver and loads the orangehrm webpage
-* orangelogin.feature - tests sucessful logins and unsucessful logins
+* orangelogin.feature - tests successful logins and unsuccessful logins
 * timesheets.feature - tests that a logged in user can access timesheets from the Nav Menu
 
 ### Other Notes
 
-* Hardcoded information such as Xpaths, websirte url pulled from conf.ini.
-* environment.py - handles webdriver and creates screetshots for failed tests (view in Allure) 
+* Hardcoded information such as Xpaths, website url pulled from conf.ini.
+* environment.py - handles webdriver and creates screenshots for failed tests (view in Allure) 
 
 
 ## How to Use Allure to view reports
