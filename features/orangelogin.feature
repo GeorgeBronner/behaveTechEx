@@ -13,3 +13,5 @@ Feature: OrangeHRM Login
             | admin123 | admin    |
             | admin    | badpass  |
             | baduser  | admin123 |
+
+        # first username password will work, the next three should fail
