@@ -5,5 +5,4 @@ Feature: OrangeHRM Logo
         When open orange hrm homepage 
         Then verify that the logo is present on Page
         Then verify Orange is in the Title
-        And close browser
 

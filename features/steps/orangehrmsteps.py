@@ -14,13 +14,9 @@ def step_impl(context):
 
 @then('verify that the logo is present on Page')
 def step_impl(context):
-    status = context.reg.select(configReader.readConfig("locators", "logo_CLASS")).is_displayed()
+    status = context.reg.isDisplayed("logo_CLASS")
     assert status
 
 @then(u'verify Orange is in the Title')
 def step_impl(context):
-    assert 'Orange' in context.driver.title
-
-@then('close browser')
-def step_impl(context):
-    context.driver.close()
+    assert 'Orange' in context.reg.title

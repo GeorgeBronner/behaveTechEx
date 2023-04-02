@@ -9,6 +9,7 @@ class LoginPage(BasePage):
 
     def open(self,url):
         self.driver.get(url)
+        self.title = self.driver.title
 
     def setUsername(self,username):
         self.type("username_NAME",username)
