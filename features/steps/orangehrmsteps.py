@@ -1,5 +1,4 @@
 from behave import *
-from selenium.webdriver.common.by import By
 from features.pageobjects.LoginPage import LoginPage
 from Tools import configReader
 

@@ -27,3 +27,5 @@ def step_impl(context):
         assert False, "Test Failed"
     if text == 'Invalid credentials':
         assert True, "Test Passed"
+    else:
+        assert False, "Test Failed"
